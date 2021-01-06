@@ -11,7 +11,7 @@
   width: 100%;
   padding: 0;
   margin: 0;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   transform: scale(1.1);
   background-size: cover;
