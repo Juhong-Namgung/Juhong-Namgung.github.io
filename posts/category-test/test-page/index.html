@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Category</title>
+    <title>Category Test Page</title>
     
 
 
@@ -36,8 +36,13 @@
 <link rel="stylesheet" href="/css/style.css"/>
 
     
-    <link rel="stylesheet" href="/css/layouts/list.css">
-    <link rel="stylesheet" href="/css/navigators/sidebar.css">
+<meta name="description" content="Category Test Page" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
 
 
     
@@ -96,9 +101,6 @@
 
       
       
-  
-  
-
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
@@ -135,9 +137,12 @@
   
   
   
+    
+    
+  
   
     
-    <li><a class="" href="/posts/category-test/test-page/">Test Page</a></li>
+    <li><a class="active" href="/posts/category-test/test-page/">Test Page</a></li>
   
 
 
@@ -157,69 +162,88 @@
       
       
 <section class="content-section" id="content-section">
-  <div class="content container-fluid" id="content">
-    <div class="container-fluid post-card-holder" id="post-card-holder">
+  <div class="content">
+    <div class="container p-0 read-area">
       
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://Juhong-Namgung.github.io/images/default-hero.jpg);'>
+      </div>
+
       
-        <div class="post-card">
-  <a href="/posts/category-test/test-page/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Category Test Page</h5>
-        <p class="card-text post-summary"></p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">January 10, 2021</span>
-        <a
-        href="/posts/category-test/test-page/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/me.jpeg'/>
+          <h5 class="author-name">남궁 주홍</h5>
+          <p>January 10, 2021</p>
+        </div>
+
+        <div class="title">
+          <h1>Category Test Page</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/Juhong-Namgung/Juhong-Namgung.github.io/edit/master/content/posts/category-test/test-page.md">
+                <i class="fas fa-code-branch"></i>
+                
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+    
+    
+      
+        
+        
+        <div class="col-md-12 next-article">
+          <a href="/posts/introduction/" class="btn btn-outline-info">
+            <span> <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Introduction</span>
+          </a>
+        </div>
+      
+    
+  
+
 </div>
 
+      <hr />
       
-        <div class="post-card">
-  <a href="/posts/introduction/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/posts/introduction/hero.svg'/>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Introduction</h5>
-        <p class="card-text post-summary">Greeting! This is an introduction post. This post tests the followings:
- Hero image is in the same directory as the post. This post should be at top of the sidebar. Post author should be the same as specified in author.yaml file.  </p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">January 9, 2021</span>
-        <a
-        href="/posts/introduction/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
       
-    </div>
-    <div class="paginator">
-      
-
-
+      </div>
     </div>
   </div>
+  
 </section>
 
 
       
-       
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3"></h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
     </div>
 
     
@@ -359,7 +383,12 @@
 
     
     
-    <script src="/js/list.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
 
   </body>
 </html>

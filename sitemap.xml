@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://Juhong-Namgung.github.io/posts/introduction/</loc>
-    <lastmod>2021-01-09T08:06:25+06:00</lastmod>
+    <loc>https://Juhong-Namgung.github.io/posts/</loc>
+    <lastmod>2021-01-10T06:00:20+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://Juhong-Namgung.github.io/posts/category-test/test-page/</loc>
+    <lastmod>2021-01-10T06:00:20+06:00</lastmod>
   </url>
   
   <url>
     <loc>https://Juhong-Namgung.github.io/</loc>
-    <lastmod>2021-01-09T08:06:25+06:00</lastmod>
+    <lastmod>2021-01-10T06:00:20+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://Juhong-Namgung.github.io/posts/</loc>
+    <loc>https://Juhong-Namgung.github.io/posts/introduction/</loc>
     <lastmod>2021-01-09T08:06:25+06:00</lastmod>
   </url>
   
