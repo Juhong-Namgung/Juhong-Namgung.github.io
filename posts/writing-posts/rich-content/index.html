@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Automate Theme Update</title>
+    <title>Rich Content</title>
     
 
 
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="/css/style.css"/>
 
     
-<meta name="description" content="Automate Theme Update" />
+<meta name="description" content="Rich Content" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
@@ -114,15 +114,12 @@
   
   
   
-    
-    
-  
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/getting-started/">Getting Started</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/getting-started/">Getting Started</a>
       
-      <ul class="active">
+      <ul class="">
         
   
   
@@ -155,12 +152,9 @@
   
   
   
-    
-    
-  
   
     
-    <li><a class="active" href="/posts/getting-started/getting-started/theme-update/">Automate Theme Update</a></li>
+    <li><a class="" href="/posts/getting-started/getting-started/theme-update/">Automate Theme Update</a></li>
   
 
 
@@ -172,12 +166,15 @@
   
   
   
+    
+    
+  
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/writing-posts/">Writing Posts</a>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/writing-posts/">Writing Posts</a>
       
-      <ul class="">
+      <ul class="active">
         
   
   
@@ -260,9 +257,12 @@
   
   
   
+    
+    
+  
   
     
-    <li><a class="" href="/posts/writing-posts/rich-content/">Rich Content</a></li>
+    <li><a class="active" href="/posts/writing-posts/rich-content/">Rich Content</a></li>
   
 
   
@@ -294,7 +294,7 @@
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://Juhong-Namgung.github.io/posts/getting-started/getting-started/theme-update/hero.svg);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://Juhong-Namgung.github.io/posts/writing-posts/rich-content/hero.svg);'>
       </div>
 
       
@@ -306,46 +306,96 @@
         </div>
 
         <div class="title">
-          <h1>Automate Theme Update</h1>
+          <h1>Rich Content</h1>
         </div>
 
         <div class="post-content" id="post-content">
-          <p>You might want to keep your site up-to-date with the latest version of theme to enjoy the latest features and fixes. In this post, we are going to setup a <code>Dependabot</code> Github app to automatically update the theme version. The app will check daily if there is any update in the submodules. If it finds any update in the theme, it will create a PR updating your site to the latest theme version.</p>
-<h3 id="setup-dependabot">Setup Dependabot</h3>
-<p>At first install <code>Dependabot</code>in your account/organization from <a href="https://github.com/marketplace/dependabot-preview">here</a>. Then, enable it in your repository by clicking <code>Enable Dependabot</code> button under <code>Insights &gt; Dependency Graph &gt; Dependabot</code> settings of your repository. A screenshot has been given below that is showing the process:</p>
-<img src="enable_dependabot.png"
-    
-    
-    
-    
-    
-        class="center"
-    
->
+          <p>Hugo ships with several <a href="https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes">Built-in Shortcodes</a> for rich content, along with a <a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config</a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.</p>
+<hr>
+<h2 id="instagram-simple-shortcode">Instagram Simple Shortcode</h2>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<hr>
+<h2 id="youtube-privacy-enhanced-shortcode">YouTube Privacy Enhanced Shortcode</h2>
 
-<div style="margin-top: 2rem;"></div>
-<p>Now, create a <code>dependabot.yml</code> file in the <code>.github</code> folder of your repository with the following content:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># Update dependencies</span>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/ZJthWmvUzzc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 
-<span style="color:#f92672">version</span>: <span style="color:#ae81ff">2</span>
-<span style="color:#f92672">updates</span>:
-<span style="color:#75715e"># Update the git submodules</span>
-- <span style="color:#f92672">package-ecosystem</span>: <span style="color:#e6db74">&#34;gitsubmodule&#34;</span>
-  <span style="color:#f92672">directory</span>: <span style="color:#e6db74">&#34;/&#34;</span>
-  <span style="color:#f92672">schedule</span>:
-    <span style="color:#f92672">interval</span>: <span style="color:#e6db74">&#34;daily&#34;</span>
-  <span style="color:#f92672">labels</span>:
-  - <span style="color:#e6db74">&#34;dependencies&#34;</span>
-  - <span style="color:#e6db74">&#34;automerge&#34;</span>
-</code></pre></div><p>You are all set. Now, depndabot will check for sub-module update daily. It will create a PR to your site if it find any update in the theme.</p>
-<p>To know more about the configuration options of Dependabot, please visit <a href="https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates">here</a>.</p>
+<!-- raw HTML omitted -->
+<hr>
+<h2 id="twitter-simple-shortcode">Twitter Simple Shortcode</h2>
 
+
+
+
+<style type="text/css">
+  .twitter-tweet {
+  font: 14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  border-left: 4px solid #2b7bb9;
+  padding-left: 1.5em;
+  color: #555;
+}
+  .twitter-tweet a {
+  color: #2b7bb9;
+  text-decoration: none;
+}
+  blockquote.twitter-tweet a:hover,
+  blockquote.twitter-tweet a:focus {
+  text-decoration: underline;
+}
+</style>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”<br>— Jan Tschichold <a href="https://t.co/gcv7SrhvJb">pic.twitter.com/gcv7SrhvJb</a></p>&mdash; Graphic Design History (@DesignReviewed) <a href="https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw">January 17, 2019</a></blockquote>
+
+<!-- raw HTML omitted -->
+<hr>
+<h2 id="vimeo-simple-shortcode">Vimeo Simple Shortcode</h2>
+
+
+
+
+
+
+<style>
+.__h_video {
+   position: relative;
+   padding-bottom: 56.23%;
+   height: 0;
+   overflow: hidden;
+   width: 100%;
+   background: #000;
+}
+.__h_video img {
+   width: 100%;
+   height: auto;
+   color: #000;
+}
+.__h_video .play {
+   height: 72px;
+   width: 72px;
+   left: 50%;
+   top: 50%;
+   margin-left: -36px;
+   margin-top: -36px;
+   position: absolute;
+   cursor: pointer;
+}
+</style>
+
+
+<div class="s_video_simple __h_video">
+<a href="https://vimeo.com/4.8912912e&#43;07" rel="noopener" target="_blank">
+
+
+<img src="https://i.vimeocdn.com/video/337401969_640.jpg" srcset="https://i.vimeocdn.com/video/337401969_640.jpg 1x, https://i.vimeocdn.com/video/337401969.jpg 2x" alt="Sing Jan Swing - Kinetic Type">
+<div class="play"><svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61"><circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000"></circle><path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff"></path></svg></div></a></div>
         </div>
 
         
         
           <div class="btn-improve-page">
-              <a href="https://github.com/Juhong-Namgung/Juhong-Namgung.github.io/edit/master/content/posts/getting-started/getting-started/theme-update/index.md">
+              <a href="https://github.com/Juhong-Namgung/Juhong-Namgung.github.io/edit/master/content/posts/writing-posts/rich-content/index.md">
                 <i class="fas fa-code-branch"></i>
                 
               </a>
@@ -360,25 +410,13 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
       
       <div class="col-md-6 previous-article">
-        <a href="/posts/getting-started/getting-started/netlify/" class="btn btn-outline-info">
+        <a href="/posts/writing-posts/math/" class="btn btn-outline-info">
           <span><i class="fas fa-chevron-circle-left"></i> </span>
           <br />
-          <span>Deploy site in Netlify</span>
+          <span>Math Type Settings</span>
         </a>
       </div>
       
@@ -392,14 +430,26 @@
           
         
         <div class="col-md-6 next-article">
-          <a href="/posts/writing-posts/organizing/category/" class="btn btn-outline-info">
+          <a href="/posts/writing-posts/using-emoji/" class="btn btn-outline-info">
             <span> <i class="fas fa-chevron-circle-right"></i></span>
             <br />
-            <span>Creating Category</span>
+            <span>Using Emoji</span>
           </a>
         </div>
       
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -432,11 +482,10 @@
       <div class="toc">
         <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#setup-dependabot">Setup Dependabot</a></li>
-      </ul>
-    </li>
+    <li><a href="#instagram-simple-shortcode">Instagram Simple Shortcode</a></li>
+    <li><a href="#youtube-privacy-enhanced-shortcode">YouTube Privacy Enhanced Shortcode</a></li>
+    <li><a href="#twitter-simple-shortcode">Twitter Simple Shortcode</a></li>
+    <li><a href="#vimeo-simple-shortcode">Vimeo Simple Shortcode</a></li>
   </ul>
 </nav>
       </div>

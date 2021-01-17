@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Automate Theme Update</title>
+    <title>Creating Sub Category</title>
     
 
 
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="/css/style.css"/>
 
     
-<meta name="description" content="Automate Theme Update" />
+<meta name="description" content="Creating Sub Category" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
@@ -114,15 +114,12 @@
   
   
   
-    
-    
-  
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/getting-started/">Getting Started</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/getting-started/">Getting Started</a>
       
-      <ul class="active">
+      <ul class="">
         
   
   
@@ -155,12 +152,9 @@
   
   
   
-    
-    
-  
   
     
-    <li><a class="active" href="/posts/getting-started/getting-started/theme-update/">Automate Theme Update</a></li>
+    <li><a class="" href="/posts/getting-started/getting-started/theme-update/">Automate Theme Update</a></li>
   
 
 
@@ -172,23 +166,29 @@
   
   
   
+    
+    
+  
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/writing-posts/">Writing Posts</a>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/writing-posts/">Writing Posts</a>
       
-      <ul class="">
+      <ul class="active">
         
   
   
   
   
+    
+    
+  
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/writing-posts/organizing/">Organizing Posts</a>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/writing-posts/organizing/">Organizing Posts</a>
       
-      <ul class="">
+      <ul class="active">
         
   
   
@@ -203,20 +203,26 @@
   
   
   
+    
+    
+  
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/writing-posts/organizing/sub-category/">Sub-Category</a>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/writing-posts/organizing/sub-category/">Sub-Category</a>
       
-      <ul class="">
+      <ul class="active">
         
   
   
   
   
+    
+    
+  
   
     
-    <li><a class="" href="/posts/writing-posts/organizing/sub-category/example/">Creating Sub-Category</a></li>
+    <li><a class="active" href="/posts/writing-posts/organizing/sub-category/example/">Creating Sub-Category</a></li>
   
 
 
@@ -294,7 +300,7 @@
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://Juhong-Namgung.github.io/posts/getting-started/getting-started/theme-update/hero.svg);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://Juhong-Namgung.github.io/images/default-hero.jpg);'>
       </div>
 
       
@@ -306,46 +312,18 @@
         </div>
 
         <div class="title">
-          <h1>Automate Theme Update</h1>
+          <h1>Creating Sub Category</h1>
         </div>
 
         <div class="post-content" id="post-content">
-          <p>You might want to keep your site up-to-date with the latest version of theme to enjoy the latest features and fixes. In this post, we are going to setup a <code>Dependabot</code> Github app to automatically update the theme version. The app will check daily if there is any update in the submodules. If it finds any update in the theme, it will create a PR updating your site to the latest theme version.</p>
-<h3 id="setup-dependabot">Setup Dependabot</h3>
-<p>At first install <code>Dependabot</code>in your account/organization from <a href="https://github.com/marketplace/dependabot-preview">here</a>. Then, enable it in your repository by clicking <code>Enable Dependabot</code> button under <code>Insights &gt; Dependency Graph &gt; Dependabot</code> settings of your repository. A screenshot has been given below that is showing the process:</p>
-<img src="enable_dependabot.png"
-    
-    
-    
-    
-    
-        class="center"
-    
->
-
-<div style="margin-top: 2rem;"></div>
-<p>Now, create a <code>dependabot.yml</code> file in the <code>.github</code> folder of your repository with the following content:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># Update dependencies</span>
-
-<span style="color:#f92672">version</span>: <span style="color:#ae81ff">2</span>
-<span style="color:#f92672">updates</span>:
-<span style="color:#75715e"># Update the git submodules</span>
-- <span style="color:#f92672">package-ecosystem</span>: <span style="color:#e6db74">&#34;gitsubmodule&#34;</span>
-  <span style="color:#f92672">directory</span>: <span style="color:#e6db74">&#34;/&#34;</span>
-  <span style="color:#f92672">schedule</span>:
-    <span style="color:#f92672">interval</span>: <span style="color:#e6db74">&#34;daily&#34;</span>
-  <span style="color:#f92672">labels</span>:
-  - <span style="color:#e6db74">&#34;dependencies&#34;</span>
-  - <span style="color:#e6db74">&#34;automerge&#34;</span>
-</code></pre></div><p>You are all set. Now, depndabot will check for sub-module update daily. It will create a PR to your site if it find any update in the theme.</p>
-<p>To know more about the configuration options of Dependabot, please visit <a href="https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates">here</a>.</p>
+          <h3 id="complete-post-coming-soon">Complete Post Coming Soon&hellip;</h3>
 
         </div>
 
         
         
           <div class="btn-improve-page">
-              <a href="https://github.com/Juhong-Namgung/Juhong-Namgung.github.io/edit/master/content/posts/getting-started/getting-started/theme-update/index.md">
+              <a href="https://github.com/Juhong-Namgung/Juhong-Namgung.github.io/edit/master/content/posts/writing-posts/organizing/sub-category/example/index.md">
                 <i class="fas fa-code-branch"></i>
                 
               </a>
@@ -368,17 +346,13 @@
   
 
   
-
-  
-
-  
     
       
       <div class="col-md-6 previous-article">
-        <a href="/posts/getting-started/getting-started/netlify/" class="btn btn-outline-info">
+        <a href="/posts/writing-posts/organizing/category/" class="btn btn-outline-info">
           <span><i class="fas fa-chevron-circle-left"></i> </span>
           <br />
-          <span>Deploy site in Netlify</span>
+          <span>Creating Category</span>
         </a>
       </div>
       
@@ -392,14 +366,18 @@
           
         
         <div class="col-md-6 next-article">
-          <a href="/posts/writing-posts/organizing/category/" class="btn btn-outline-info">
+          <a href="/posts/writing-posts/front-matter/" class="btn btn-outline-info">
             <span> <i class="fas fa-chevron-circle-right"></i></span>
             <br />
-            <span>Creating Category</span>
+            <span>Front Matter</span>
           </a>
         </div>
       
     
+  
+
+  
+
   
 
   
@@ -434,7 +412,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#setup-dependabot">Setup Dependabot</a></li>
+        <li><a href="#complete-post-coming-soon">Complete Post Coming Soon&hellip;</a></li>
       </ul>
     </li>
   </ul>

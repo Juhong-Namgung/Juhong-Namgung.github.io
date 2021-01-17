@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Automate Theme Update</title>
+    <title>Using Emoji</title>
     
 
 
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="/css/style.css"/>
 
     
-<meta name="description" content="Automate Theme Update" />
+<meta name="description" content="Using Emoji" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
@@ -114,15 +114,12 @@
   
   
   
-    
-    
-  
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/getting-started/">Getting Started</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/getting-started/">Getting Started</a>
       
-      <ul class="active">
+      <ul class="">
         
   
   
@@ -155,12 +152,9 @@
   
   
   
-    
-    
-  
   
     
-    <li><a class="active" href="/posts/getting-started/getting-started/theme-update/">Automate Theme Update</a></li>
+    <li><a class="" href="/posts/getting-started/getting-started/theme-update/">Automate Theme Update</a></li>
   
 
 
@@ -172,12 +166,15 @@
   
   
   
+    
+    
+  
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/writing-posts/">Writing Posts</a>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/writing-posts/">Writing Posts</a>
       
-      <ul class="">
+      <ul class="active">
         
   
   
@@ -269,9 +266,12 @@
   
   
   
+    
+    
+  
   
     
-    <li><a class="" href="/posts/writing-posts/using-emoji/">Using Emoji</a></li>
+    <li><a class="active" href="/posts/writing-posts/using-emoji/">Using Emoji</a></li>
   
 
 
@@ -294,7 +294,7 @@
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://Juhong-Namgung.github.io/posts/getting-started/getting-started/theme-update/hero.svg);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://Juhong-Namgung.github.io/posts/writing-posts/using-emoji/hero.svg);'>
       </div>
 
       
@@ -306,46 +306,26 @@
         </div>
 
         <div class="title">
-          <h1>Automate Theme Update</h1>
+          <h1>Using Emoji</h1>
         </div>
 
         <div class="post-content" id="post-content">
-          <p>You might want to keep your site up-to-date with the latest version of theme to enjoy the latest features and fixes. In this post, we are going to setup a <code>Dependabot</code> Github app to automatically update the theme version. The app will check daily if there is any update in the submodules. If it finds any update in the theme, it will create a PR updating your site to the latest theme version.</p>
-<h3 id="setup-dependabot">Setup Dependabot</h3>
-<p>At first install <code>Dependabot</code>in your account/organization from <a href="https://github.com/marketplace/dependabot-preview">here</a>. Then, enable it in your repository by clicking <code>Enable Dependabot</code> button under <code>Insights &gt; Dependency Graph &gt; Dependabot</code> settings of your repository. A screenshot has been given below that is showing the process:</p>
-<img src="enable_dependabot.png"
-    
-    
-    
-    
-    
-        class="center"
-    
->
-
-<div style="margin-top: 2rem;"></div>
-<p>Now, create a <code>dependabot.yml</code> file in the <code>.github</code> folder of your repository with the following content:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># Update dependencies</span>
-
-<span style="color:#f92672">version</span>: <span style="color:#ae81ff">2</span>
-<span style="color:#f92672">updates</span>:
-<span style="color:#75715e"># Update the git submodules</span>
-- <span style="color:#f92672">package-ecosystem</span>: <span style="color:#e6db74">&#34;gitsubmodule&#34;</span>
-  <span style="color:#f92672">directory</span>: <span style="color:#e6db74">&#34;/&#34;</span>
-  <span style="color:#f92672">schedule</span>:
-    <span style="color:#f92672">interval</span>: <span style="color:#e6db74">&#34;daily&#34;</span>
-  <span style="color:#f92672">labels</span>:
-  - <span style="color:#e6db74">&#34;dependencies&#34;</span>
-  - <span style="color:#e6db74">&#34;automerge&#34;</span>
-</code></pre></div><p>You are all set. Now, depndabot will check for sub-module update daily. It will create a PR to your site if it find any update in the theme.</p>
-<p>To know more about the configuration options of Dependabot, please visit <a href="https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates">here</a>.</p>
-
+          <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>The <a href="https://gohugo.io/functions/emojify/"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site’s <a href="https://gohugo.io/getting-started/configuration/">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
+<hr>
+<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">.emoji {
+font-family: Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,Android Emoji,EmojiSymbols;
+}</code></pre></div>
         </div>
 
         
         
           <div class="btn-improve-page">
-              <a href="https://github.com/Juhong-Namgung/Juhong-Namgung.github.io/edit/master/content/posts/getting-started/getting-started/theme-update/index.md">
+              <a href="https://github.com/Juhong-Namgung/Juhong-Namgung.github.io/edit/master/content/posts/writing-posts/using-emoji/index.md">
                 <i class="fas fa-code-branch"></i>
                 
               </a>
@@ -358,48 +338,32 @@
 
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
     
       
       <div class="col-md-6 previous-article">
-        <a href="/posts/getting-started/getting-started/netlify/" class="btn btn-outline-info">
+        <a href="/posts/writing-posts/rich-content/" class="btn btn-outline-info">
           <span><i class="fas fa-chevron-circle-left"></i> </span>
           <br />
-          <span>Deploy site in Netlify</span>
+          <span>Rich Content</span>
         </a>
       </div>
       
     
     
-      
-        
-        
-          
-              
-          
-        
-        <div class="col-md-6 next-article">
-          <a href="/posts/writing-posts/organizing/category/" class="btn btn-outline-info">
-            <span> <i class="fas fa-chevron-circle-right"></i></span>
-            <br />
-            <span>Creating Category</span>
-          </a>
-        </div>
-      
-    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -430,15 +394,7 @@
       <h5 class="text-center pl-3"></h5>
       <hr>
       <div class="toc">
-        <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#setup-dependabot">Setup Dependabot</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+        <nav id="TableOfContents"></nav>
       </div>
     </div>
     

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Automate Theme Update</title>
+    <title>Math Type Settings</title>
     
 
 
@@ -36,7 +36,7 @@
 <link rel="stylesheet" href="/css/style.css"/>
 
     
-<meta name="description" content="Automate Theme Update" />
+<meta name="description" content="Math Type Settings" />
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
@@ -114,15 +114,12 @@
   
   
   
-    
-    
-  
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/getting-started/">Getting Started</a>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/getting-started/">Getting Started</a>
       
-      <ul class="active">
+      <ul class="">
         
   
   
@@ -155,12 +152,9 @@
   
   
   
-    
-    
-  
   
     
-    <li><a class="active" href="/posts/getting-started/getting-started/theme-update/">Automate Theme Update</a></li>
+    <li><a class="" href="/posts/getting-started/getting-started/theme-update/">Automate Theme Update</a></li>
   
 
 
@@ -172,12 +166,15 @@
   
   
   
+    
+    
+  
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/writing-posts/">Writing Posts</a>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/writing-posts/">Writing Posts</a>
       
-      <ul class="">
+      <ul class="active">
         
   
   
@@ -251,9 +248,12 @@
   
   
   
+    
+    
+  
   
     
-    <li><a class="" href="/posts/writing-posts/math/">Math Guide</a></li>
+    <li><a class="active" href="/posts/writing-posts/math/">Math Guide</a></li>
   
 
   
@@ -294,7 +294,7 @@
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://Juhong-Namgung.github.io/posts/getting-started/getting-started/theme-update/hero.svg);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://Juhong-Namgung.github.io/posts/writing-posts/math/hero.svg);'>
       </div>
 
       
@@ -306,46 +306,38 @@
         </div>
 
         <div class="title">
-          <h1>Automate Theme Update</h1>
+          <h1>Math Type Settings</h1>
         </div>
 
         <div class="post-content" id="post-content">
-          <p>You might want to keep your site up-to-date with the latest version of theme to enjoy the latest features and fixes. In this post, we are going to setup a <code>Dependabot</code> Github app to automatically update the theme version. The app will check daily if there is any update in the submodules. If it finds any update in the theme, it will create a PR updating your site to the latest theme version.</p>
-<h3 id="setup-dependabot">Setup Dependabot</h3>
-<p>At first install <code>Dependabot</code>in your account/organization from <a href="https://github.com/marketplace/dependabot-preview">here</a>. Then, enable it in your repository by clicking <code>Enable Dependabot</code> button under <code>Insights &gt; Dependency Graph &gt; Dependabot</code> settings of your repository. A screenshot has been given below that is showing the process:</p>
-<img src="enable_dependabot.png"
-    
-    
-    
-    
-    
-        class="center"
-    
->
+          <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
+<p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
+<ul>
+<li>Create a partial under <code>/layouts/partials/math.html</code></li>
+<li>Within this partial reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
+<li>Include the partial in your templates like so:</li>
+</ul>
+<pre><code>{{ if or .Params.math .Site.Params.math }}
+{{ partial &quot;math.html&quot; . }}
+{{ end }}
+</code></pre><ul>
+<li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
+<li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files.</li>
+</ul>
+<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a>
+</p>
+<h3 id="examples">Examples</h3>
 
-<div style="margin-top: 2rem;"></div>
-<p>Now, create a <code>dependabot.yml</code> file in the <code>.github</code> folder of your repository with the following content:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># Update dependencies</span>
-
-<span style="color:#f92672">version</span>: <span style="color:#ae81ff">2</span>
-<span style="color:#f92672">updates</span>:
-<span style="color:#75715e"># Update the git submodules</span>
-- <span style="color:#f92672">package-ecosystem</span>: <span style="color:#e6db74">&#34;gitsubmodule&#34;</span>
-  <span style="color:#f92672">directory</span>: <span style="color:#e6db74">&#34;/&#34;</span>
-  <span style="color:#f92672">schedule</span>:
-    <span style="color:#f92672">interval</span>: <span style="color:#e6db74">&#34;daily&#34;</span>
-  <span style="color:#f92672">labels</span>:
-  - <span style="color:#e6db74">&#34;dependencies&#34;</span>
-  - <span style="color:#e6db74">&#34;automerge&#34;</span>
-</code></pre></div><p>You are all set. Now, depndabot will check for sub-module update daily. It will create a PR to your site if it find any update in the theme.</p>
-<p>To know more about the configuration options of Dependabot, please visit <a href="https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates">here</a>.</p>
-
+<p>Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$</p>
         </div>
 
         
         
           <div class="btn-improve-page">
-              <a href="https://github.com/Juhong-Namgung/Juhong-Namgung.github.io/edit/master/content/posts/getting-started/getting-started/theme-update/index.md">
+              <a href="https://github.com/Juhong-Namgung/Juhong-Namgung.github.io/edit/master/content/posts/writing-posts/math/index.md">
                 <i class="fas fa-code-branch"></i>
                 
               </a>
@@ -362,23 +354,13 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
     
       
       <div class="col-md-6 previous-article">
-        <a href="/posts/getting-started/getting-started/netlify/" class="btn btn-outline-info">
+        <a href="/posts/writing-posts/markdown-syntax/" class="btn btn-outline-info">
           <span><i class="fas fa-chevron-circle-left"></i> </span>
           <br />
-          <span>Deploy site in Netlify</span>
+          <span>Markdown Syntax Guide</span>
         </a>
       </div>
       
@@ -392,14 +374,24 @@
           
         
         <div class="col-md-6 next-article">
-          <a href="/posts/writing-posts/organizing/category/" class="btn btn-outline-info">
+          <a href="/posts/writing-posts/rich-content/" class="btn btn-outline-info">
             <span> <i class="fas fa-chevron-circle-right"></i></span>
             <br />
-            <span>Creating Category</span>
+            <span>Rich Content</span>
           </a>
         </div>
       
     
+  
+
+  
+
+  
+
+  
+
+  
+
   
 
   
@@ -434,7 +426,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#setup-dependabot">Setup Dependabot</a></li>
+        <li><a href="#examples">Examples</a></li>
       </ul>
     </li>
   </ul>
@@ -588,6 +580,13 @@
 <script>
   hljs.initHighlightingOnLoad();
 </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);">
+</script>
+
 
 
   </body>
